@@ -47,19 +47,34 @@ ApplicationWindow {
                 id: myComponent
                 Row {
                     id: row
-                    spacing: 10
-                    Text { id: text1;text: name}
-                    Text {text: age}
-                    Text {text: homeTown}
-                }
-            }
+                    spacing: 20
+                    Rectangle{
+                        width: 50
+                        height: 20
+                        Text {text: name}
+                    }
 
-            ListView{
-                anchors.fill: parent
-                model: myModel
-                delegate: myComponent
+                    Rectangle{
+                        width: 50
+                        height: 20
+                        Text {text: age}
+                    }
+                    Rectangle{
+                        width: 50
+                        height: 20
+                        Text {text: homeTown}
+                    }
+
+                }
+
             }
         }
 
+        ListView{
+            anchors.fill: parent
+            model: myModel
+            delegate: myComponent
+        }
     }
+
 }
