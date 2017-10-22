@@ -48,21 +48,15 @@ ApplicationWindow {
                 Row {
                     id: row
                     spacing: 20
-                    Rectangle{
-                        width: 50
-                        height: 20
-                        Text {text: name}
+                    MyRectangle{
+                        Text {text: name; color: index % 2 === 0 ? "red":"blue"}
                     }
 
-                    Rectangle{
-                        width: 50
-                        height: 20
-                        Text {text: age}
+                    MyRectangle{
+                        Text {text: age; color: index % 2 === 0 ? "red":"blue"}
                     }
-                    Rectangle{
-                        width: 50
-                        height: 20
-                        Text {text: homeTown}
+                    MyRectangle{
+                        Text {text: homeTown; color: index % 2 === 0 ? "red":"blue"}
                     }
 
                 }
@@ -76,5 +70,4 @@ ApplicationWindow {
             delegate: myComponent
         }
     }
-
 }
